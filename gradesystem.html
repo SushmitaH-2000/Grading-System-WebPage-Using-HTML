@@ -1,0 +1,49 @@
+<html>
+    <head>
+        
+        <script>
+            function check()
+            {
+                document.getElementById("p").value=(document.getElementById("o").value/document.getElementById("m").value*100);
+                let temp=document.getElementById("p").value;
+                let grade;
+                switch(Math.floor(temp/10))
+                {
+                    case 1: grade="C-";
+                            break;
+                    case 2: grade="C";
+                            break;
+                    case 3: grade="C+";
+                            break;
+                    case 4: grade="B-";
+                            break;
+                    case 5: grade="B";
+                            break;
+                    case 6: grade="B+";
+                            break;
+                    case 7: grade="A-";
+                            break;
+                    case 8: grade="A";
+                            break;
+                    case 9: grade="A++";
+                            break;
+                          
+                    default:grade="Fail";
+                }
+                document.getElementById("g").value=grade;
+            }
+        </script>
+    </head>
+    <body bgcolor="pink">
+     <center>
+        <div class="menu">
+        <h1><i><u>Grading System</u></i></h1><br>
+        <i><h2>Enter the Obtained Marks: <input type="text"  id="o"></h2><br>
+        <h2><i>Enter the maximum Marks: <input type="text"  id="m"></i></h2><br>
+        <h2><i>The total percentage: <input type="text"  id="p"></i></h2><br>
+        <h2><i>The total grade is : <input type="text"  id="g"></i></h2><br>
+        <i><button type="button" onclick="check()">Check for Grade</button></i>
+     </div>
+    </center>
+    </body>
+</html>
